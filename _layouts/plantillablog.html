@@ -1,0 +1,15 @@
+---
+layout: layout
+---
+
+{{content}}
+<h4>Listado de posts</h4>
+<ul>
+	{% for post in site.posts %}
+	<li>
+		<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+		<p>Fecha de publicación:{{post.date}}</p>
+		{{ post.excerpt }}
+	</li>
+	{% endfor%}
+</ul>	
